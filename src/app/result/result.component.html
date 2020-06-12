@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row m-2">
+        <div class="col-lg-3 m-3" *ngFor="let item of pageOfItems">
+            <div class="card h-100 bg-dark text-light" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text"> <a href="{{item.owner.html_url}}/{{item.name}}"
+                        class="card-link">{{item.owner.html_url}}/{{item.name}}</a> &nbsp;</p>
+                        <p class="card-text"> <a *ngIf="item.language"> {{item?.language}}</a> &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf = "repos" class="text-center">
+    <app-repo-table [items]="repos" (changePage)="onChangePage($event)"></app-repo-table>
+</div>

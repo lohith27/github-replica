@@ -1,0 +1,15 @@
+<div class="row bg-danger">
+    <div class="col-lg-6" id="content">
+        <img src={{userDetails.avatar_url}} alt="">
+    </div>
+    <div class="col-lg-6" id="content">
+        <h1>{{userDetails.name}}</h1>
+        <h2>{{userDetails.login}}</h2>
+        <h2>{{userDetails.email}}</h2>
+        <h2>Url : <a href={{userDetails.html_url}} target="blank">{{userDetails.html_url}}</a></h2>
+        <h2>Followers : {{userDetails.followers}}</h2>
+        <h2>Following : {{userDetails.following}}</h2>
+        <h2>Repositories {{userDetails.public_repos}}</h2>
+        <button (click)="navigateRepos()" class = "btn btn-primary">View Repositories</button>
+    </div>
+</div>

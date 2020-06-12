@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <form [formGroup]="searchForm">
+        <div class="row">
+            <div class="col-lg-12 text-dark">
+                <h2>Type the user name here</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <input type="text" formControlName="userName" class="form-control">
+            </div>
+            <div class="col-lg-2">
+                <button [routerLink]="'/home/'+searchForm.value.userName" class="btn btn-success">Search user</button>
+            </div>
+        </div>
+    </form>
+</div>
